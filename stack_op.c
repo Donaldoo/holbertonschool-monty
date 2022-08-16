@@ -6,7 +6,7 @@
  * @line_number: istruction's line number
  * @num: value of the element to add
  */
-void _push(stack_t **stack, unsigned int line_number, char *num)
+void push(stack_t **stack, unsigned int line_number, char *num)
 {
 	stack_t *new;
 	int i;

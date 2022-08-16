@@ -15,7 +15,7 @@
 #define DELIMITERS "\n\t\r"
 
 void pall(stack_t **stack, unsigned int __attribute__((unused))line_number);
-void _push(stack_t **stack, unsigned int line_number, char *num);
+void push(stack_t **stack, unsigned int line_number, char *num);
 
 int get_op_code(char *opcode, stack_t **stack, unsigned int line_number);
 

@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 		if (strcmp(opcode, "push") == 0)
 		{
 			n = strtok(NULL, DELIMITERS);
-			_push(&stack, line_number, n);
+			push(&stack, line_number, n);
 		}
 		else
 			get_op_code(opcode, &stack, line_number);
