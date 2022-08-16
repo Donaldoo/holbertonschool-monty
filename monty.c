@@ -23,6 +23,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
+<<<<<<< HEAD
 	fp = fopen(argv[1], "r");
 	if (fp == NULL)
 	{
@@ -80,4 +81,8 @@ void free_all(stack_t *stack, char *line, FILE *fp)
 		free_stack(&stack);
 	free(line);
 	fclose(fp);
+=======
+	read_file(av[1], stack);
+	return (0);
+>>>>>>> e800b2b477ebe147e6cdf1e9198b6c637fa9f647
 }
