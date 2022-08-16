@@ -6,9 +6,26 @@
  * @line_number: istruction's line number
  * @num: value of the element to add
  */
-void push(stack_t **stack, __attribute__((unused)) unsigned int line_number, int num)
+void _push(stack_t **stack, unsigned int line_number, char *num)
 {
 	stack_t *new;
+	int i;
+
+	if (num == NULL)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	for (i = 0; num[i] != '\0'; i++)
+	{
+		if (num[0] == '-' && i == 0)
+			continue;
+		if(isdigit(num[i]) == 0)
+		{
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
+			exit(EXIT_FAILURE);
+		}
+	}
 	
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
@@ -21,8 +38,10 @@ void push(stack_t **stack, __attribute__((unused)) unsigned int line_number, int
 	new->prev = NULL;
 	new->next = NULL;
 	
-	new->next = *stack;
 	if (*stack != NULL)
+	{
+		new->next = *stack;
 		(*stack)->prev = new;
+	}
 	*stack = new;
 }

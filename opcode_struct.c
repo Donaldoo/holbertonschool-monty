@@ -5,12 +5,11 @@
  * @token: opcode from stdin
  * @line_number: line number
  */
-void(*get_op_code(char *token, unsigned int line_number))(stack_t **, unsigned int)
+int get_op_code(char *token, stack_t **stack, unsigned int line_number)
 {
 	int i;
 
 	instruction_t operation[] = {
-		{"push", push},
 		{"pall", pall},
 		{NULL, NULL}
 	};
@@ -18,9 +17,11 @@ void(*get_op_code(char *token, unsigned int line_number))(stack_t **, unsigned i
 	for (i = 0; operation[i].opcode != NULL; i++)
 	{
 		if (strcmp(token, operation[i].opcode) == 0)
-			return (operation[i].f)
+		{
+			(operation[i].f)(stack, line_number);
+			return (EXIT_SUCCESS);
+		}
 	}
-
 	printf("L%d: unknown instruction %s\n", line_number, token);
-	return (NULL);
+	exit(EXIT_FAILURE);
 }
