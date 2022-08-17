@@ -11,7 +11,8 @@ int get_op_code(char *token, stack_t **stack, unsigned int line_number)
 
 	instruction_t operation[] = {
 		{"pall", pall}, {"pint", pint}, {"pop", pop}, {"swap", swap},
-		{NULL, NULL}
+		{"nop", nop}, {"add", add_}, {"sub", sub_}, {"div", div_},
+		{"mul", mul_}, {"mod", mod_}, {NULL, NULL}
 	};
 
 	for (i = 0; operation[i].opcode != NULL; i++)
