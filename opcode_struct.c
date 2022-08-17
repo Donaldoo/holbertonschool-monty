@@ -3,7 +3,9 @@
 /**
  * get_op_code - checks for opcode's function and executes it
  * @token: opcode from stdin
+ * @stack: pointer to stack;
  * @line_number: line number
+ * Return: Success
  */
 int get_op_code(char *token, stack_t **stack, unsigned int line_number)
 {
