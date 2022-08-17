@@ -5,7 +5,7 @@
  * @stack: pointer to stack
  * @line_number: instruction's line number
  */
-void pall(stack_t **stack, unsigned int __attribute__((unused))line_number)
+void pall(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
 	stack_t *tmp = *stack;
 
