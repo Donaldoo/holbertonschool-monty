@@ -76,7 +76,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 	int value;
 	stack_t *tmp;
 
-	if (*tmp == NULL || tmp == NULL)
+	if (*stack == NULL || stack == NULL)
 	{
 		putchar('\n');
 		return;
