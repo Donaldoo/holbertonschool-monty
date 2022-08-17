@@ -5,14 +5,12 @@
  * @argc: number of arguments
  * @argv: argument vector
  * Return: succes
- */ 
+ */
 int main(int argc, char **argv)
 {
 	FILE *fp;
 	stack_t *stack = NULL;
-	char *line = NULL;
-	char *opcode;
-	char *n;
+	char *line = NULL, *opcode, *n;
 	unsigned int line_number;
 	size_t len = 0;
 	ssize_t read;

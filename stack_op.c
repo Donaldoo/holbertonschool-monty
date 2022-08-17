@@ -20,13 +20,13 @@ void push(stack_t **stack, unsigned int line_number, char *num)
 	{
 		if (num[0] == '-' && i == 0)
 			continue;
-		if(isdigit(num[i]) == 0)
+		if (isdigit(num[i]) == 0)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			exit(EXIT_FAILURE);
 		}
 	}
-	
+
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
@@ -37,7 +37,7 @@ void push(stack_t **stack, unsigned int line_number, char *num)
 	new->n = atoi(num);
 	new->prev = NULL;
 	new->next = NULL;
-	
+
 	if (*stack != NULL)
 	{
 		new->next = *stack;
