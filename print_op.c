@@ -64,3 +64,33 @@ void pchar(stack_t **stack, unsigned int line_number)
 	putchar(value);
 	putchar('\n');
 }
+
+/**
+ * pstr - prints the string at the top of the stack
+ * @stack: pointer to stack
+ * @line_number: line number, unused variable
+ */
+void pstr(stack_t **stack, unsigned int line_number)
+{
+	(void)line_number;
+	int value;
+	stack_t *tmp;
+
+	if (*tmp == NULL || tmp == NULL)
+	{
+		putchar('\n');
+		return;
+	}
+
+	tmp = *stack;
+	while (tmp)
+	{
+		value = tmp->n;
+
+		if (value < 0 || value > 127)
+			break;
+		putchar(value);
+		tmp = tmp->next;
+	}
+	putchar('\n');
+}
