@@ -58,7 +58,9 @@ The files should be compiled by :
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 
 How to use:
+
 1- compile files
+
 2- $ ./monty monty_byte_code_file_name.n
 
 
