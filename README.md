@@ -50,11 +50,11 @@ pall
 Setup:
 
 git clone git@github.com:Donaldoo/holbertonschool-monty.git
-$ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 
 Compilation code:
 
 The files should be compiled by :
+
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 
 How to use:
