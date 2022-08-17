@@ -31,22 +31,6 @@ void pint_stack(stack_t **top, __attribute__((unused)) unsigned int line)
 /**
  *
  */
-void swap_stack(stac_t **top, __attribute__((unused)) unsigned int line)
-{
-	int nr;
-
-	if (*top == NULL || ((*top)->next == NULL))
-	{
-		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);                exit(EXIT_FAILURE);
-	}
-	nr = (*top)->n;
-	(*top)->n = (*top)->next->n;
-	(*top)->next->n = nr;
-}
-
-/**
- *
- */
 void add_stack(stack_t **top, __attribute__((unused)) unsigned int line)
 {
 	stack *tmp;
