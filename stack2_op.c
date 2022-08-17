@@ -31,16 +31,16 @@ void pint_stack(stack_t **top, __attribute__((unused)) unsigned int line)
 /**
  *
  */
-void add_stack(stack_t **top, __attribute__((unused)) unsigned int line)
+void add_stack(stack_t **top, __attribute__((unused)) unsigned int line_number)
 {
-	stack *tmp;
+	stack_t *tmp;
 
 	if (*top == NULL || ((*top)->next == NULL))
 	{
-		fprintf(stderr, "L%u: can't add, stack too short\n", line);
+		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	tmp = (*top)->next;
-	(*top)->n += (*top)->n;
-	pop_stack(top, line_number);
+	tmp->n += (*top)->n;
+	add_stack(top, line_number);
 }
