@@ -22,6 +22,6 @@ int get_op_code(char *token, stack_t **stack, unsigned int line_number)
 			return (EXIT_SUCCESS);
 		}
 	}
-	printf("L%d: unknown instruction %s\n", line_number, token);
+	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, token);
 	exit(EXIT_FAILURE);
 }
