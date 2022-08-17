@@ -25,17 +25,29 @@ All the files that containing Monty byte codes usually have the .m extension. Th
 Example of usage:
 
 $cat bytecodes/12.m
+
 push 1
+
 push 2
+
 push 3
+
 pall
+
 add
+
 pall
+
 ./monty bytecodes/12.m
+
 3
+
 2
+
 1
+
 5
+
 1.
 
 Setup:
