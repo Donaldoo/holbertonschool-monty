@@ -1,12 +1,8 @@
  C- PROGRAMMING :STACKS, QUEUES - LIFO, FIFO
 
 C is a programming language which is used to develop the software like operating system, databases compilers, and so on.
-This project it has to do with the concepts of STACKS, QUEUES and the LIFO AND FIFO methods and the implemantation. The project is done by : 
+This project it has to do with the concepts of STACKS, QUEUES and the LIFO AND FIFO methods and the implemantation. The project is done by : Donaldoo and armigjoka.
 
-Donaldoo and armigjoka.
-
-github.com/Donaldoo/holbertonschool-monty
-github.com/armigjoka.
 
 In the end of the project we are able to answer those questions:
 
@@ -130,7 +126,7 @@ calculate.c- The file that adds the last 2 elements of the stack and use the var
 
 Environment:
 
-Ubuntu 14.04 LTS via Vagrant in VirtualBox and is compiled with GCC version 4.8.4
+Ubuntu 14.04 LTS and is compiled with GCC version 4.8.4
 
 
 Authors:
