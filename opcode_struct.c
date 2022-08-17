@@ -10,7 +10,7 @@ int get_op_code(char *token, stack_t **stack, unsigned int line_number)
 	int i;
 
 	instruction_t operation[] = {
-		{"pall", pall}, {"pint", pint},
+		{"pall", pall}, {"pint", pint}, {"pop", pop},
 		{NULL, NULL}
 	};
 
