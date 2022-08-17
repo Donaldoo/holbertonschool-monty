@@ -20,6 +20,7 @@ void pall(stack_t **stack, __attribute__((unused)) unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number, char *num);
 void pop(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
 
 int get_op_code(char *opcode, stack_t **stack, unsigned int line_number);
 
