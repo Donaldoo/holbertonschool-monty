@@ -1,6 +1,6 @@
 # C - Stacks, Queues - LIFO, FIFO
 
-## The Monty language
+## The Monty language :clipboard:
 **Monty** is a scripting language that is first compiled into Monty byte codes. It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 
 #### **Monty byte code files:**
@@ -24,7 +24,7 @@ $ ./monty bytecodes/12.m
 1
 ```
 
-## Compilation & Output:
+## Compilation & Output: :gear:
 
 * All files should be compiled with:
 
@@ -35,7 +35,7 @@ $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 * Any error message must be printed on `stderr`.
 
 
-## Usage
+## Usage  :wrench:
 
 * `./monty file.m`
     * where `file.m` is the path to the file containing Monty byte code.
@@ -55,7 +55,7 @@ $ ./monty bytecodes/00.m
 1
 ```
 
-## File descriptions
+## Files description :file_folder:
 
 <!-- ⛔️ MD-MAGIC-EXAMPLE:START (TOC:collapse=true&collapseText=Click to expand) -->
 <details>
@@ -67,6 +67,7 @@ $ ./monty bytecodes/00.m
 * [monty.h](https://github.com/Donaldoo/holbertonschool-monty/blob/main/monty.h) :arrow_right: Header file containing libraries and prototypes of the functions used in this project.
 * [monty.c](https://github.com/Donaldoo/holbertonschool-monty/blob/main/monty.c) :arrow_right: Main function and getline loop.
 * [opcode_struct.c](https://github.com/Donaldoo/holbertonschool-monty/blob/main/opcode_struct.c) :arrow_right: Searches through structure of function pointers.
+
 * [print_op.c](https://github.com/Donaldoo/holbertonschool-monty/blob/main/print_op.c) :arrow_right: Functions used to print values in stack.
      * `pall` - Prints all values of the stack.
      * `pint` - Prints the value at the top of the stack.
