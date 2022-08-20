@@ -16,7 +16,7 @@
 
 #define DELIMITERS "\n\t\r "
 
-/* stack and print opcodes */
+/* stack manipulation and stack print opcodes */
 void pall(stack_t **stack, __attribute__((unused)) unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number, char *num);
@@ -25,6 +25,10 @@ void swap(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
+
+/* Stack rotation opcodes */
+void rotl(stack_t **stack, __attribute__((unused)) unsigned int line_number);
+void rotr(stack_t **stack, __attribute__((unused)) unsigned int line_number);
 
 /* opcodes struct */
 int get_op_code(char *opcode, stack_t **stack, unsigned int line_number);
