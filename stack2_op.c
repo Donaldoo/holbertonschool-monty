@@ -3,6 +3,7 @@
 /**
  * rotl - rotates the stack to the top
  * @stack: pointer to stack
+ * @line_number: line number, unsused
  */
 void rotl(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
@@ -23,6 +24,7 @@ void rotl(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 /**
  * rotr - rotates the stack to the bottom
  * @stack: pointer to stack
+ * @line_number: line number, unused
  */
 void rotr(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 {
