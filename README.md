@@ -1,140 +1,92 @@
- C- PROGRAMMING :STACKS, QUEUES - LIFO, FIFO
+# C - Stacks, Queues - LIFO, FIFO
 
-C is a programming language which is used to develop the software like operating system, databases compilers, and so on.
-This project it has to do with the concepts of STACKS, QUEUES and the LIFO AND FIFO methods and the implemantation. The project is done by : Donaldoo and armigjoka.
+## The Monty language :clipboard:
+**Monty** is a scripting language that is first compiled into Monty byte codes. It relies on a unique stack, with specific instructions to manipulate it. The goal of this project is to create an interpreter for Monty ByteCodes files.
 
-
-In the end of the project we are able to answer those questions:
-
--What do LIFO and FIFO mean?
--What is a stack, and when we can use it?
--What is a queue, and when we can use it?
--What are the common implementations of stacks and queues?
--What are the common uses cases of stacks and queues?
--What are the proprer way to use global variables?
-
-
-Monty byte code files:
-
-All the files that containing Monty byte codes usually have the .m extension. There is not more that an instruction per line. There can be number of spaces before or after the opcode and its argument is :
-
+#### **Monty byte code files:**
+Files containing Monty byte codes usually have the `.m` extension. There is not more than one instruction per line. There can be any number of spaces before or after the opcode and its argument:
 Example of usage:
 
-$cat bytecodes/12.m
-
+```
+$ cat bytecodes/12.m
 push 1
-
 push 2
-
 push 3
-
 pall
-
 add
-
 pall
 
-./monty bytecodes/12.m
-
+$ ./monty bytecodes/12.m
 3
-
 2
-
 1
-
 5
-
 1
+```
 
+## Compilation & Output: :gear:
 
-Setup:
+* All files should be compiled with:
 
-git clone git@github.com:Donaldoo/holbertonschool-monty.git
-
-Compilation code:
-
-The files should be compiled by :
-
+```
 $ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
-
-How to use:
-
-1- compile files
-
-2- $ ./monty monty_byte_code_file_name.n
+```
+* Any output must be printed on `stdout`.
+* Any error message must be printed on `stderr`.
 
 
-0. Push, Pall
-- "Implement the push and pall opcodes
+## Usage  :wrench:
 
-push- Push the elements of the stacks.
+* `./monty file.m`
+    * where `file.m` is the path to the file containing Monty byte code.
 
-pall- Prints all the values on the stack, starting from the top of the stack.
+**Example**:
 
-1. Pint
-- "Implement the pint opcode.
+```
+$ cat bytecodes/00.m
+push 1
+push 2
+push 3
+pall
 
-pint- Prints the value at the top of the stack, followed by a new line.
+$ ./monty bytecodes/00.m
+3
+2
+1
+```
 
-2. Pop
-- "Implement the pop  opcode.
+## Files description :file_folder:
 
-pop- Removes the top element of the stack
+<!-- ⛔️ MD-MAGIC-EXAMPLE:START (TOC:collapse=true&collapseText=Click to expand) -->
+<details>
+<summary>Click to expand</summary>
 
-3. Swap
-- "Implement the swap opcode.
+</br>
 
-swap- Swaps the top two elements of the stack.
+* [struct.h](https://github.com/Donaldoo/holbertonschool-monty/blob/main/struct.h) :arrow_right: Structures (declarations) needed for this project.
+* [monty.h](https://github.com/Donaldoo/holbertonschool-monty/blob/main/monty.h) :arrow_right: Header file containing libraries and prototypes of the functions used in this project.
+* [monty.c](https://github.com/Donaldoo/holbertonschool-monty/blob/main/monty.c) :arrow_right: Main function and getline loop.
+* [opcode_struct.c](https://github.com/Donaldoo/holbertonschool-monty/blob/main/opcode_struct.c) :arrow_right: Searches through structure of function pointers.
 
-4. "Add
-- "Implement the add opcode.
-
-add- Adds the top to elements of the stack.
-
-sub- Substracts the top element of the stack from the second top element of the stack.
-
-div- Divides the second top element of the stack by the top element of the stack.
-
-mul- Multiplies the second top of the stack with the top element of the stack.
-
-mod- Computes the rest of the division of the second top element of the stack by the top element of the stack.
-
-stack- Sets the format of the data to a stack(LIFO). The default behaviour of the program.
-
-queue- Sets the format of the ata to a queue(FIFO). 
-
-5. Nop
-- "Implement the nope opcode.
-nop- Doesn't do anything.
-
-FILE Description:
-
-monty.h- The header of the project which are included all the prototypes of the functions and the structures that we have used in this project.
-
-monty.c- The main function of the project whih contains int main(int argc, char **argv).
-
-bytecodes- Are the monty bytecodes files.
-
-struct.h- Is the file which has the structure that is used for the project.
-
-stack_op.c- Is the file which contains functions create stack and queues: push,swap, pop, nop.
-
-print_op.c- Is the file which contains functions to print the stack and queues: pall, pint.
-
-opcode_struct.c- The file that checks the opcode's function and executes it.
-
-calculate.c- The file that adds the last 2 elements of the stack and use the varibles likes sub_, mul_, div_, mod_ and the variable of the stack: add_.
+* [print_op.c](https://github.com/Donaldoo/holbertonschool-monty/blob/main/print_op.c) :arrow_right: Functions used to print values in stack.
+     * `pall` - Prints all values of the stack.
+     * `pint` - Prints the value at the top of the stack.
+     * `pchar` - Prints the char at the top of the stack.
+     * `pstr` - Prints the string starting at the top of the stack.
+* [stack_op.c](https://github.com/Donaldoo/holbertonschool-monty/blob/main/stack_op.c) :arrow_right: Functions used to manipulate the stack.
+     * `push <int>` - Pushes an int onto the top of the stack.
+     * `pop` - Removes the top element of the stack.
+     * `swap` - Swaps the top two elements of the stack.
+     * `nop` - Doesn't do anything.
+* [calculate.c](https://github.com/Donaldoo/holbertonschool-monty/blob/main/calculate.c) :arrow_right: Functions used to do math operations on stack values.
+     * `add` - Adds the top two elements of the stack.
+     * `sub` - Subtracts the top element of the stack from the second one.
+     * `mul` - Multiplies the top two elements of the stack.
+     * `div` - Divides the second element of the stack by the top one.
+     * `mod` - Returns the remainder of dividing the second element of the stack by the top one.
+</details>
+<!-- ⛔️ MD-MAGIC-EXAMPLE:END -->
 
 
-Environment:
-
-Ubuntu 14.04 LTS and is compiled with GCC version 4.8.4
-
-
-Authors:
- 
--Donaldoo and armigjoka.
-
-github.com/Donaldoo/holbertonschool-monty
-
-github.com/armigjoka.
+### Authors:
+ * **Donaldoo and armigjoka**
