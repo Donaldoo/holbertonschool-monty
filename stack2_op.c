@@ -35,7 +35,7 @@ void rotr(stack_t **stack, __attribute__((unused)) unsigned int line_number)
 		bottom = bottom->next;
 	bottom->next = *stack;
 	(*stack)->prev = bottom;
-	(*stack)->prev->next = NULL;
-	(*stack)->prev = NULL;
+	bottom->prev->next = NULL;
+	bottom->prev = NULL;
 	*stack = bottom;
 }
